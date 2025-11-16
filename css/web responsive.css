@@ -1,0 +1,163 @@
+/* ĐẢM BẢO MENU HIỂN THỊ TRÊN PC VÀ TABLET */
+#nav {
+    display: block;
+}
+
+#nav > li {
+    display: inline-block;
+}
+
+#nav .subnav {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    min-width: 160px;
+}
+
+
+/* PC */
+@media (min-width:1024px) {
+    #nav {
+        display: block !important;
+    }
+    
+    #nav > li {
+        display: inline-block !important;
+    }
+    
+    #nav li:hover .subnav {
+        display: block;
+    }
+    
+    .mobile-menu-btn {
+        display: none !important;
+    }
+
+    .contact-info {
+        line-height: 2;
+    }
+}
+
+/* Tablet */
+@media (min-width:740px) and (max-width: 1023px) {
+    #nav {
+        display: block !important;
+    }
+    
+    #nav > li {
+        display: inline-block !important;
+    }
+    
+    #nav .subnav {
+        display: none;
+        position: absolute;
+    }
+    
+    #nav li:hover .subnav {
+        display: block;
+    }
+    
+    .mobile-menu-btn {
+        display: none !important;
+    }
+
+    .btn {
+        padding: 15px 16px;
+    }
+
+    #nav .subnav a {
+        padding: 5 px 12px;
+    }
+    .contact-form .form-control {
+    padding:15px;
+    font-size: 16px;
+}
+    .contact-submit-btn {
+            font-size: 16px;
+
+    }
+
+}
+
+/* Mobile */
+ @media (max-width: 739px) {
+    /* Header: ẩn overflow để che menu khi đóng */
+    #header {
+        overflow: hidden;
+        height: 46px;
+    }
+    
+    /* Show mobile menu button */
+    #header .mobile-menu-btn {
+        display: block;
+    }
+
+    .search-btn {
+        display: none !important;
+    }
+
+    /* Ẩn menu nav mặc định trên mobile */
+    #nav {
+        display: none; /* ← SỬA THÀNH NONE */
+        width: 100%;
+    }
+
+    #nav > li:first-child {
+        display: block;
+        position: static;
+    }
+
+    #nav > li:first-child a{
+        display: block;
+    }
+
+    /* Khi menu mở, hiển thị nav */
+    #header.menu-open #nav {
+        display: block;
+    }
+
+    #nav li a {
+        padding: 10px 24px;
+    }
+
+    #nav > li {
+        display: block;
+        width: 100%;
+    }
+
+    /* Subnav: Ẩn mặc định */
+    #nav .subnav {
+        display: none;
+        position: relative;
+        background-color: #333;
+        padding-left: 20px;
+    }
+
+    /* Hiện subnav khi có class show */
+    #nav .subnav.show {
+        display: block;
+    }
+
+    #nav .subnav a {
+        color: #fff;
+        padding: 10px 24px;
+        display: block;
+    }
+
+    .s-col-full{
+        width: 100%;
+        margin: 8px 0;
+    }
+    .s-mt-8{
+        margin: 8px 0 ;
+    }
+    .contact-form .form-control {
+    padding:15px;
+    font-size: 16px;
+}
+    .contact-submit-btn {
+            font-size: 16px;
+
+    }
+}
